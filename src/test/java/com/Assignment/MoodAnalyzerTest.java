@@ -8,17 +8,15 @@ public class MoodAnalyzerTest {
 
     @Test
     public void moodhappytest() {
-        String message = "Im in any mood...";
-        String expectedmessage = "happy";
-        String actualmessage = mood.analysehappyMood(message);
+        String expectedmessage = "HAPPY";
+        String actualmessage = mood.analyseMood();
         Assert.assertEquals(expectedmessage, actualmessage);
     }
 
     @Test
     public void moodsadtest() {
-        String message = "Im in sad mood...";
-        String expectedmessage = "sad";
-        String actualmessage = mood.analysesadMood(message);
+        String expectedmessage = "SAD";
+        String actualmessage = mood.analyseMood();
         Assert.assertEquals(expectedmessage, actualmessage);
     }
 }

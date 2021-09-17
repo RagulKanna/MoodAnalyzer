@@ -2,16 +2,22 @@ package com.Assignment;
 
 public class MoodAnalyzer {
 
-    public static String analysehappyMood(String message) {
-        if (message.contains("any") || message.contains("ANY")) {
-            return "happy";
-        } else
-            return "sad";
+    public static String message = "Im in SAD mood";
+
+    public MoodAnalyzer() {
     }
-    public static String analysesadMood(String message) {
-        if (message.contains("sad") || message.contains("SAD")) {
-            return "sad";
+
+    public MoodAnalyzer(String message) {
+        this.message = message;
+    }
+
+    public static String analyseMood() {
+        if (message.contains("any") || message.contains("ANY") || message.contains("Any")) {
+            return "HAPPY";
+        }
+        if (message.contains("SAD") || message.contains("Sad") || message.contains("sad")) {
+            return "SAD";
         } else
-            return "happy";
+            return null;
     }
 }
