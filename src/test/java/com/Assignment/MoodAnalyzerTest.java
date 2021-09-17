@@ -14,7 +14,7 @@ public class MoodAnalyzerTest {
     }
 
     @Test
-    public void moodsadtest() {
+    public void moodsadtest(){
         String expectedmessage = "SAD";
         String actualmessage = mood.analyseMood();
         Assert.assertEquals(expectedmessage, actualmessage);
